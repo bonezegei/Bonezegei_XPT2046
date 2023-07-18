@@ -13,10 +13,11 @@ class Bonezegei_XPT2046 {
 public:
   Bonezegei_XPT2046();
   Bonezegei_XPT2046(uint8_t cs, uint8_t irq);
+  Bonezegei_XPT2046(uint8_t cs);
 
   void begin();
   void setCallBack(void (*cb)());
-  void getInput();
+  uint8_t getInput();
 
   uint8_t _cs;
   uint8_t _irq;
